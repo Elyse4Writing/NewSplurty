@@ -10,25 +10,43 @@
 
   <body>
     <header class="row">
+     
       
-      <div class=col-3>
-        LOGO
+      <div class="col-3">
+        
+       <div class="circle">
+         
+        <br />
+        It's time
+        <br />
+        to crack
+        <br />
+        the code!
+        
       </div>
+     
       
-      <div class=col-4>
+      <div class="col-4 slogan">
         Blurting and splurting out unsolicited bits of wisdom since 2017.
       </div>
         
-      <div class=col-5>
+      <div class="col-5 links">
         <%= link_to 'Contribute', '#' %>
         <%= link_to 'About', '#' %>
         <%= link_to 'Contact', '#' %>
+         
       </div> 
+      
     </header>
     
-    <br class="clear" />
+    </hr>
     
+    <br class="clear"/>
     
-    <%= yield %>
+    <div class="container">
+       <%= yield %>
+    </div>
+
+   
   </body>
 </html>
