@@ -1,7 +1,7 @@
 @import "bootstrap";
 
-@import url('https://fonts.googleapis.com/css?family=Lobster');
-
+//@import url('https://fonts.googleapis.com/css?family=Lobster');
+//google font line removed for now
 
 .clear {
     clear: both;
@@ -41,6 +41,9 @@
   color: black;
   font-size: 15px;
   border-bottom: 1px solid #40C2ED;
+  font-family: 'exoregular', sans-serif;
+  font-weight: bold;
+  
 }
 
 header {
@@ -51,13 +54,14 @@ hr {
   clear:both;
 }
 
-h1 {font-family: "Lobster", sans-serif;
-    font-weight: 600;
+h1 {font-family: 'exodemibold', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
     letter-spacing: -1.5px;
 }
 
 h2 {
-  font-family: "Lobster", sans-serif;
-  font-weight: 600;
+  font-family: 'exoregular', sans-serif;
+  font-weight: light;
   letter-spacing: -1.5px;
 }
