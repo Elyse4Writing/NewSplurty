@@ -26,14 +26,16 @@
       <% end %>
      </div>
       
-      <div class="col-4 slogan">
+      <div class="col col-sm-4 hidden-xs-down slogan">
         Your source for unsolicited bits of wisdom since 2017.
       </div>
         
-      <div class="col-10 links">
+      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
        <!-- Button trigger modal -->
         <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+        &nbsp;&nbsp;
         <%= link_to 'About', about_path %>
+        &nbsp;&nbsp;
         <%= link_to 'More Information', information_path %>
          
       </div> 
@@ -46,16 +48,13 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
             <h4 class="Contribute Your Quotes!" id="myModalLabel">Contribute Your Quotes!</h4>
           </div>
           <div class="modal-body">
             <%= simple_form_for Quote.new do |f| %>
-              <%= f.input :saying %>
-              <%= f.input :author %>
-              <%= f.submit 'Create', class: 'btn btn-danger' %> 
+              <%= f.input :saying, label: "What is the saying you want to add?", placeholder: "The man who goes alone can start today; but he who travels with another must wait till that other is ready." %>
+                 <br />
+              <%= f.input :author, label: "Who is credited for the saying?", placeholder: "Henry David Thoreau"  %>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -86,13 +85,12 @@
 
     <footer class="footer">
       <div class="container">
-         <div class="row">
-           
+         <div class="col-12 col-sm-6"> 
       <div class="col-6">
       <%= link_to "This isn't enough! I need more.", root_path, class: 'next-quote' %>
       </div>
       
-      <div class="col-6 footer-blurb">
+      <div class="col-12 col-sm-6 footer-blurb">
         Proudly hacked in Hollywood, California by <a href="http://thefirehoseproject.com">Elyse J. Glickma</a><br />
         Get new skills when you build your own Splurty Web App - <a href="http://thefirehoseproject.com">Learn how to code here</a>
       </div>
